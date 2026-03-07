@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: "Segoe UI", Arial, sans-serif;
+                font-size: 9.5px;
+                color: #222;
+                background: #fff;
+                padding: 18px 22px;
+                max-width: 800px;
+                margin: auto;
+                line-height: 1.35;
+            }
+            /* HEADER */
+            header {
+                border-bottom: 2px solid #2563eb;
+                padding-bottom: 8px;
+                margin-bottom: 10px;
+            }
+            h1 {
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #1e3a8a;
+            }
+            .subtitle {
+                font-size: 10.5px;
+                color: #2563eb;
+                font-weight: 600;
+                margin-top: 1px;
+            }
+            .contact {
+                margin-top: 4px;
+                font-size: 8.5px;
+                color: #444;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .contact a {
+                color: #2563eb;
+                text-decoration: none;
+            }
+
+            /* LAYOUT */
+            .columns {
+                display: grid;
+                grid-template-columns: 1fr 200px;
+                gap: 14px;
+            }
+            .main {
+            }
+            .side {
+            }
+
+            /* SECTIONS */
+            h2 {
+                font-size: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                color: #2563eb;
+                border-bottom: 1px solid #bfdbfe;
+                padding-bottom: 2px;
+                margin-bottom: 6px;
+                margin-top: 10px;
+            }
+            h2:first-child {
+                margin-top: 0;
+            }
+
+            /* PROFIL */
+            .profil p {
+                font-size: 9px;
+                color: #333;
+                line-height: 1.45;
+            }
+
+            /* EXPERIENCES */
+            .job {
+                margin-bottom: 7px;
+            }
+            .job-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            .job-title {
+                font-weight: 700;
+                font-size: 9.5px;
+                color: #1e3a8a;
+            }
+            .job-date {
+                font-size: 8px;
+                color: #888;
+                white-space: nowrap;
+            }
+            .job-company {
+                font-size: 8.5px;
+                color: #555;
+                font-style: italic;
+                margin-bottom: 3px;
+            }
+            ul {
+                padding-left: 12px;
+            }
+            li {
+                font-size: 8.5px;
+                margin-bottom: 2px;
+                color: #333;
+            }
+
+            /* FORMATIONS */
+            .edu {
+                margin-bottom: 5px;
+            }
+            .edu-title {
+                font-weight: 700;
+                font-size: 9px;
+                color: #1e3a8a;
+            }
+            .edu-school {
+                font-size: 8.5px;
+                color: #555;
+                font-style: italic;
+            }
+            .edu-date {
+                font-size: 8px;
+                color: #888;
+            }
+
+            /* COMPÉTENCES */
+            .skill-group {
+                margin-bottom: 6px;
+            }
+            .skill-label {
+                font-weight: 700;
+                font-size: 8.5px;
+                color: #1e3a8a;
+                margin-bottom: 5px;
+            }
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 3px;
+            }
+            .tag {
+                background: #eff6ff;
+                color: #1d4ed8;
+                border: 1px solid #bfdbfe;
+                border-radius: 3px;
+                padding: 2px 6px;
+                font-size: 7.5px;
+                font-weight: 500;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+            }
+            .tag.learning {
+                background: #fefce8;
+                color: #92400e;
+                border-color: #fde68a;
+            }
+            .tag.cert {
+                background: #f0fdf4;
+                color: #166534;
+                border-color: #bbf7d0;
+            }
+
+            /* PROJETS */
+            .projet {
+                margin-bottom: 4px;
+            }
+            .projet-title {
+                font-weight: 700;
+                font-size: 9px;
+                color: #1e3a8a;
+            }
+            .projet-title a {
+                color: #1e3a8a;
+                text-decoration: underline;
+                text-decoration-color: #93c5fd;
+                text-underline-offset: 2px;
+            }
+            .job-company a {
+                color: #555;
+                text-decoration: underline;
+                text-decoration-color: #93c5fd;
+                text-underline-offset: 2px;
+            }
+            .projet-desc {
+                font-size: 8.5px;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Hugo GHESQUIER</h1>
+            <div class="subtitle">
+                Étudiant en informatique · Futur Développeur Backend ou DevOps
+            </div>
+            <div class="contact">
+                <span>📍 Marquette-Lez-Lille</span>
+                <span>📞 +33 6 11 07 15 78</span>
+                <span>✉️ hugo.ghesquier.pro@gmail.com</span>
+                <a
+                    href="https://www.linkedin.com/in/hugo-ghesquier/"
+                    target="_blank"
+                    >LinkedIn</a
+                >
+                <span>|</span>
+                <a href="https://github.com/devZenta" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <div class="profil" style="margin-bottom: 10px">
+            <p>
+                Étudiant en informatique passionné par le
+                <strong>développement backend</strong>, l'<strong
+                    >automatisation</strong
+                >
+                et les <strong>défis</strong> d'<strong>infrastructure</strong>.
+                Rigoureux et curieux, je m'implique pleinement dans chaque
+                projet, de l'architecture technique à la mise en production.
+                Curieux des pratiques de <strong>CI/CD</strong> et de mise en
+                production, je cherche à mettre mes compétences au service d'une
+                organisation ambitieuse où la technique est mise au service de
+                <strong>vrais problèmes</strong>.
+            </p>
+        </div>
+
+        <div class="columns">
+            <div class="main">
+                <h2>Expérience</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title"
+                            >Développeur Logiciel / Automatisation (CDD)</span
+                        >
+                        <span class="job-date">Mai 2025 – Déc. 2025</span>
+                    </div>
+                    <div class="job-company">
+                        <a href="https://github.com/RPA-TJ-Lille"
+                            >Tribunal Judiciaire de Lille</a
+                        >
+                    </div>
+                    <ul>
+                        <li>
+                            Développement d'outils pour automatiser les tâches
+                            répétitives des agents (Barobaj, DecisionBaj,
+                            Numeribaj, Statobaj).
+                        </li>
+                        <li>
+                            Développement et déploiement d'<strong
+                                >IMPRIM'FIP</strong
+                            >
+                            : solution RPA automatisant le dépôt massif de
+                            documents judiciaires (LS/LRAR) sur la plateforme
+                            nationale — extraction PDF, renommage intelligent,
+                            dépôt automatisé via Playwright, suivi des AR,
+                            génération de rapports et notifications email.
+                            Déployée sur un serveur Microsoft et mise à
+                            l'échelle à la
+                            <strong>Cour d'appel de Douai</strong>, avec tâche
+                            planifiée par juridiction.
+                        </li>
+                        <li>
+                            Approfondissement en développement logiciel et RPA ;
+                            découverte du fonctionnement d'une juridiction
+                            judiciaire.
+                        </li>
+                        <li>
+                            Maintenance continue des logiciels en production sur
+                            le serveur du TJ de Lille.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title"
+                            >Développeur Applications Mobiles (Stage)</span
+                        >
+                        <span class="job-date">Juin 2022</span>
+                    </div>
+                    <div class="job-company">Appiway, Lille</div>
+                    <ul>
+                        <li>
+                            Observation des différents métiers impliqués dans le
+                            développement d'une application mobile : design,
+                            développement, gestion de projet et relation client.
+                        </li>
+                        <li>
+                            Première immersion dans l'univers du
+                            <strong>software</strong> et des
+                            <strong>startups</strong>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title"
+                            >Service Après-Vente Informatique (Stage)</span
+                        >
+                        <span class="job-date">Déc. 2021</span>
+                    </div>
+                    <div class="job-company">Boulanger, Villeneuve d'Ascq</div>
+                    <ul>
+                        <li>
+                            Application pratique :
+                            <strong>démontage et réparation</strong>
+                            d'iPhone et d'ordinateurs portables.
+                        </li>
+                        <li>
+                            Première expérience en entreprise dans le secteur de
+                            l'informatique.
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Projet Personnel</h2>
+                <div class="projet">
+                    <span class="projet-title">T.I.R</span>
+                    <p class="projet-desc">
+                        Solution SaaS complète pour les clubs de pétanque :
+                        création de tournois en 2 minutes, inscription via QR
+                        code, gestion du club, suivi du palmarès et historique
+                        de parties par joueur. Notifications en temps réel
+                        intégrées.
+                    </p>
+                </div>
+                <div class="projet" style="margin-top: 5px">
+                    <span class="projet-title"
+                        ><a href="https://github.com/MyHouse-OS"
+                            >MyHouse OS</a
+                        ></span
+                    >
+
+                    <p class="projet-desc">
+                        Système domotique théorique sur ESP32 : API REST (Bun +
+                        ElysiaJS), dashboard Next.js, serveur MCP pour contrôle
+                        via IA, déployé via Docker Compose. Contrôle des
+                        lumières, chauffage, portes et température.
+                    </p>
+                </div>
+                <div class="projet" style="margin-top: 5px">
+                    <span class="projet-title"
+                        ><a href="https://github.com/devZenta/SafeSend"
+                            >SafeSend</a
+                        ></span
+                    >
+
+                    <p class="projet-desc">
+                        Proof of concept d'un relais email anti-spam : serveur
+                        SMTP qui valide les destinataires via callback URL avant
+                        toute distribution, éliminant le spam à la source.
+                    </p>
+                </div>
+            </div>
+            <div class="side">
+                <h2>Compétences</h2>
+
+                <div class="skill-group">
+                    <div class="skill-label">Runtime & Frameworks</div>
+                    <div class="tags">
+                        <span class="tag">Bun</span
+                        ><span class="tag">Node.js</span>
+                        <span class="tag">Next.js</span
+                        ><span class="tag">Hono</span>
+                        <span class="tag">ElysiaJS</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">Langages</div>
+                    <div class="tags">
+                        <span class="tag">TypeScript</span
+                        ><span class="tag">JavaScript</span>
+                        <span class="tag">Python</span
+                        ><span class="tag">PHP</span>
+                        <span class="tag">SQL</span
+                        ><span class="tag">C (bases)</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">Base de données & ORM</div>
+                    <div class="tags">
+                        <span class="tag">Prisma</span
+                        ><span class="tag">PostgreSQL</span>
+                        <span class="tag">Redis</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">DevOps</div>
+                    <div class="tags">
+                        <span class="tag">Git / GitHub</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">Outils</div>
+                    <div class="tags">
+                        <span class="tag">Biome</span>
+                        <span class="tag">Knip</span>
+                        <span class="tag">Lefthook</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">IA</div>
+                    <div class="tags">
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">MCP</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">IDE & Environnement</div>
+                    <div class="tags">
+                        <span class="tag">Zed</span
+                        ><span class="tag">VS Code</span>
+                        <span class="tag">JetBrains</span>
+                        <span class="tag">Arch Linux</span
+                        ><span class="tag">Hyprland</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">Certifications</div>
+                    <div class="tags">
+                        <span class="tag cert">CCNA 1</span>
+                        <span class="tag cert">CCNA 2</span>
+                        <span class="tag cert">CSNA</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-label">Langue</div>
+                    <div class="tags">
+                        <span class="tag">Anglais B2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="main">
+                <h2>Formation</h2>
+
+                <div class="edu">
+                    <div class="edu-title">
+                        Bachelor Coordinateur de Projets Informatiques
+                    </div>
+                    <div class="edu-school">
+                        ENIGMA School – EuraTechnologies, Lille
+                    </div>
+                    <div class="edu-date">2024 – 2027</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-title">
+                        Baccalauréat Général – Mention Bien
+                    </div>
+                    <div class="edu-school">Centre Scolaire Saint Paul</div>
+                    <div class="edu-date">2021 – 2024</div>
+                </div>
+                <!-- <div class="edu">
+                    <div class="edu-title">
+                        Brevet des Collèges – Mention Bien
+                    </div>
+                    <div class="edu-school">Collège Dominique Savio</div>
+                    <div class="edu-date">2017 – 2021</div>
+                </div> -->
+            </div>
+            <div class="side">
+                <h2>À côté du code</h2>
+                <div class="skill-group">
+                    <div class="tags">
+                        <span class="tag">Course à pied</span>
+                        <span class="tag">Pétanque (compétition)</span>
+                        <span class="tag">F1 & WEC</span>
+                        <span class="tag">Veille technologique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            style="
+                margin-top: 14px;
+                text-align: center;
+                font-size: 8px;
+                color: #222;
+            "
+        >
+            CV codé en HTML · Toutes les versions
+            <a
+                href="https://github.com/devZenta/CV/releases"
+                target="_blank"
+                style="color: #2563eb; text-decoration: none"
+                >ici</a
+            >
+        </div>
+    </body>
+</html>
