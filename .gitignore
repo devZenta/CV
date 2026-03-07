@@ -1,0 +1,5 @@
+# dependencies (bun install)
+node_modules
+
+# generated PDF
+CV/

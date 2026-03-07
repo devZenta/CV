@@ -1,0 +1,16 @@
+{
+  "name": "cv",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "pdf": "bun src/build.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.38.0"
+  }
+}
