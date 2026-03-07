@@ -2,6 +2,10 @@
 
 > Mon CV codé en HTML & généré en PDF via Puppeteer. Parce que je suis dev, autant faire mon CV comme un dev.
 
+## 📥 Dernière version
+
+[![Télécharger le CV](https://img.shields.io/badge/Télécharger%20le%20CV-PDF-red?style=for-the-badge&logo=adobeacrobatreader)](https://github.com/devZenta/CV/releases/latest/download/CV_Hugo_GHESQUIER.pdf)
+
 ## 🚀 Stack
 
 - **Runtime** — [Bun](https://bun.sh)
