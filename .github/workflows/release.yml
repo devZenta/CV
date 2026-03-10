@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     if: contains(github.event.head_commit.message, '[release]') || github.event_name == 'workflow_dispatch'
@@ -37,4 +40,4 @@ jobs:
         with:
           tag_name: v${{ steps.tag.outputs.value }}
           name: "CV Hugo GHESQUIER — ${{ steps.tag.outputs.value }}"
-          files: CV_Hugo_GHESQUIER.pdf
+          files: CV/CV_Hugo_GHESQUIER.pdf
