@@ -30,13 +30,25 @@ Le PDF est généré dans `CV/CV_Hugo_GHESQUIER.pdf`.
 ## 🗂️ Structure
 
 ```
+├── .github/
+│   └── workflows/
+│       └── release.yml    # CI/CD — génération et release automatique
 ├── src/
-│   ├── index.html     # Le CV
-│   └── build.js       # Script de génération PDF
-├── CV/                # Dossier de sortie (gitignored)
-└── package.json
+│   ├── index.html         # Le CV (HTML/CSS)
+│   └── build.js           # Script de génération PDF
+├── assets/                # Assets statiques (images, fonts...)
+├── CV/                    # Dossier de sortie (gitignored)
+├── package.json
+├── tsconfig.json
+└── bun.lock
 ```
 
-## 📋 Versions
+## 🔖 Releases
 
 Toutes les versions du CV sont disponibles dans les [Releases](https://github.com/devZenta/CV/releases).
+
+Pour créer une nouvelle release, il suffit d'inclure `[release]` dans le message de commit :
+
+```bash
+git commit -m "feat(cv): update experience [release]"
+```
