@@ -18,9 +18,14 @@ const page = await browser.newPage();
 
 await page.goto(`file://${inputFile}`, { waitUntil: "networkidle0" });
 
+const contentHeight = await page.evaluate(
+  () => document.documentElement.scrollHeight
+);
+
 await page.pdf({
   path: outputFile,
-  format: "A4",
+  width: "794px",
+  height: `${contentHeight}px`,
   printBackground: true,
   margin: { top: 0, right: 0, bottom: 0, left: 0 },
 });
